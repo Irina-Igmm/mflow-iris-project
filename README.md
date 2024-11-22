@@ -8,7 +8,8 @@ This project implements a logistic regression model to classify the Iris dataset
 mlflow-iris-project
 ├── src
 │   ├── train.py                # Main logic for training the model
-│   ├── predict.py              # Logic for making predictions
+│   ├── predict.py
+    ├── promote.py             # Logic for making predictions
 │   ├── utils
 │   │   └── data.py             # Data loading and preprocessing utilities
 │   └── notebooks
