@@ -5,6 +5,12 @@ from sklearn.metrics import accuracy_score, f1_score
 
 import pandas as pd
 from sklearn import datasets
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+model_name = os.getenv("MODEL_NAME", "iris-dataset-training")
 
 
 def evaluate_model(model, X_test, y_test):
@@ -39,7 +45,7 @@ def log_experiment(accuracy, f1, model, X_train):
             artifact_path="modele_iris",
             signature=signature,
             input_example=X_train,
-            registered_model_name="demarrage-rapide-suivi",
+            registered_model_name=model_name,
         )
     return model_info
 

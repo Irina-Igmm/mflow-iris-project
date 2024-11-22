@@ -8,3 +8,5 @@ entry_points:
       alpha: {type: float, default: 0.5}
       l1_ratio: {type: float, default: 0.01}
     command: "python src/train.py --alpha {alpha} --l1_ratio {l1_ratio}"
+  promote_to_production:
+    command: "python src/promote.py"

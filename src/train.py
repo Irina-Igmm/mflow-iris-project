@@ -7,14 +7,22 @@ from predict import evaluate_model, log_experiment, load_and_predict
 import sys
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+model_name = os.getenv("MODEL_NAME", "iris-dataset-training")
 
 
 def train_model(X_train, y_train):
     # Train the model
     lr = LogisticRegression(solver="lbfgs", max_iter=1000)
     lr.fit(X_train, y_train)
+    classes = lr.classes_
+    print(f"Model classes: {classes}")
     return lr
 
 

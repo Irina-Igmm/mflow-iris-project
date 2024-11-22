@@ -74,6 +74,25 @@ python -m unittest discover -s . -p "test_model.py"
 mlflow run . -P alpha=0.5 -P l1_ratio=0.01
 ```
 
+- Lunch git project with mlflow run:
+
+```bash
+mlflow run https://github.com/Irina-Igmm/mflow-iris-project.git -v develop -P alpha=0.5 -P l1_ratio=0.01
+```
+
+- Promote model in Production after training successfull:
+
+```bash
+mlflow run . -e promote_to_production --env-manager=conda
+```
+
+- Deploy model endpoint :
+
+```bash
+mlflow models serve -m runs:/<run_id>/model -p 5000
+mlflow models serve -m models:/<model_name>/Production -p 5000 --env-manager conda
+```
+
 ## License
 
 This project is licensed under the MIT License.
