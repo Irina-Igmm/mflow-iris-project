@@ -24,12 +24,14 @@ mlflow-iris-project
 ## Setup Instructions
 
 1. Clone the repository:
+
    ```bash
    git clone <repository-url>
    cd mlflow-iris-project
    ```
 
 2. Create a conda environment:
+
    ```bash
    conda env create -f conda.yaml
    conda activate mlflow-iris-env
@@ -43,21 +45,34 @@ mlflow-iris-project
 ## Usage
 
 - To train the model, run:
+
   ```bash
   python src/train.py
   ```
 
 - To make predictions, run:
+
   ```bash
   python src/predict.py
   ```
 
 - For interactive model development, open the Jupyter notebook:
+
   ```bash
   jupyter notebook src/notebooks/model_development.ipynb
   ```
 
-- Execute test using : python -m unittest discover -s . -p "test_model.py"
+- Execute test using :
+
+```bash
+python -m unittest discover -s . -p "test_model.py"
+```
+
+- Execute mlflow run:
+
+```bash
+mlflow run . -P alpha=0.5 -P l1_ratio=0.01
+```
 
 ## License
 
