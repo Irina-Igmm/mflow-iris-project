@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/l.ravelojaona/Documents/mlflow-iris-project/mlruns/416918888651813056/d5ec6b585c034085bb925bd72c1403d4/artifacts
+end_time: 1732197289677
+entry_point_name: ''
+experiment_id: '416918888651813056'
+lifecycle_stage: active
+run_id: d5ec6b585c034085bb925bd72c1403d4
+run_name: silent-snipe-18
+run_uuid: d5ec6b585c034085bb925bd72c1403d4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732197285441
+status: 3
+tags: []
+user_id: l.ravelojaona

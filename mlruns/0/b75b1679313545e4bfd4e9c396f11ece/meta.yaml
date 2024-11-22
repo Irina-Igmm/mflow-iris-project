@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/l.ravelojaona/Documents/mlflow-iris-project/mlruns/0/b75b1679313545e4bfd4e9c396f11ece/artifacts
+end_time: 1732199671096
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b75b1679313545e4bfd4e9c396f11ece
+run_name: enthused-mule-888
+run_uuid: b75b1679313545e4bfd4e9c396f11ece
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732199666298
+status: 4
+tags: []
+user_id: l.ravelojaona

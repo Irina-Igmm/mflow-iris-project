@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/l.ravelojaona/Documents/mlflow-iris-project/mlruns/416918888651813056/63b0cdcfdfde44a58b9eb4d755323bf2/artifacts
+end_time: 1732197491979
+entry_point_name: ''
+experiment_id: '416918888651813056'
+lifecycle_stage: active
+run_id: 63b0cdcfdfde44a58b9eb4d755323bf2
+run_name: nervous-jay-620
+run_uuid: 63b0cdcfdfde44a58b9eb4d755323bf2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732197487764
+status: 3
+tags: []
+user_id: l.ravelojaona

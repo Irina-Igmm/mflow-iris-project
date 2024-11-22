@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/l.ravelojaona/Documents/mlflow-iris-project/mlruns/0/f518036d22ac493cbbfe9fd34b630220/artifacts
+end_time: 1732256621223
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f518036d22ac493cbbfe9fd34b630220
+run_name: respected-cub-198
+run_uuid: f518036d22ac493cbbfe9fd34b630220
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732256609205
+status: 4
+tags: []
+user_id: l.ravelojaona

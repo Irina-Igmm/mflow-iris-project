@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/l.ravelojaona/Documents/mlflow-iris-project/mlruns/0/7fbf59de10ab464196b67fec3a5a650f/artifacts
+end_time: 1732200568506
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7fbf59de10ab464196b67fec3a5a650f
+run_name: smiling-toad-73
+run_uuid: 7fbf59de10ab464196b67fec3a5a650f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732200563839
+status: 4
+tags: []
+user_id: l.ravelojaona
