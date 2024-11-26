@@ -1,12 +1,20 @@
-name: mlflow-iris-project
+name: mlflow-project
 
 conda_env: conda.yaml
 
 entry_points:
   main:
     parameters:
-      alpha: {type: float, default: 0.5}
-      l1_ratio: {type: float, default: 0.01}
+      alpha: { type: float, default: 0.5 }
+      l1_ratio: { type: float, default: 0.01 }
     command: "python src/train.py --alpha {alpha} --l1_ratio {l1_ratio}"
+
+  train_job:
+    parameters:
+      n_estimators: { type: int, default: 200 }
+      max_depth: { type: int, default: 10 }
+      min_samples_split: { type: int, default: 5 }
+    command: "python src/train.py --job --n_estimators {n_estimators} --max_depth {max_depth} --min_samples_split {min_samples_split}"
+
   promote_to_production:
     command: "python src/promote.py"

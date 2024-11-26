@@ -14,8 +14,10 @@ mlflow-iris-project
 │   │   └── data.py             # Data loading and preprocessing utilities
 │   └── notebooks
 │       └── model_development.ipynb # Jupyter notebook for model development
+        └── dataset_preprocessing.ipynb # Jupyter notebook for data preprocessing
 ├── tests
 │   └── test_model.py           # Unit tests for model functions
+    └── predict_with_model.py   # make prediction using mlflow models
 ├── conda.yaml                  # Conda environment configuration
 ├── MLproject                   # MLflow project definition
 ├── requirements.txt            # Python package dependencies
@@ -69,16 +71,22 @@ mlflow-iris-project
 python -m unittest discover -s . -p "test_model.py"
 ```
 
+- Exeuting test witha specific class :
+
+```bash
+python -m unittest discover -s . -p "test_*.py" -k TestJobModel
+```
+
 - Execute mlflow run:
 
 ```bash
-mlflow run . -P alpha=0.5 -P l1_ratio=0.01
+mlflow run . -e train_job
 ```
 
 - Lunch git project with mlflow run:
 
 ```bash
-mlflow run https://github.com/Irina-Igmm/mflow-iris-project.git -v develop -P alpha=0.5 -P l1_ratio=0.01
+mlflow run https://github.com/Irina-Igmm/mflow-iris-project.git -v develop  -e train_job
 ```
 
 - Promote model in Production after training successfull:
@@ -91,7 +99,13 @@ mlflow run . -e promote_to_production --env-manager=conda
 
 ```bash
 mlflow models serve -m runs:/<run_id>/model -p 5000
-mlflow models serve -m models:/<model_name>/Production -p 5000 --env-manager conda
+mlflow models serve -m models:/<model_name>/Staging -p 5000 --env-manager conda
+```
+
+- Use the `/invocations` endpoint with `curl`:
+
+```bash
+curl -X POST -H "Content-Type: application/json" --data '{"dataframe_split": {"columns": ["sepal_length", "sepal_width", "petal_length", "petal_width"], "data": [[5.1, 3.5, 1.4, 0.2], [6.2, 3.4, 5.4, 2.3]]}}' http://127.0.0.1:5000/invocations
 ```
 
 ## License
